@@ -23,4 +23,6 @@
 
 //Now go to output file location is show in  "source code written to:"
 //Manipulate that file and run it on victim computer
+//once it rum we see on our terminal we got session 1
+[*]sessions -i 1
 
