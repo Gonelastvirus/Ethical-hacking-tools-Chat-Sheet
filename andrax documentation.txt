@@ -1,0 +1,50 @@
+#!andrax commands
+//open package manager to install package and update many more
+[*]afos -h
+
+for example:
+// install empire tool
+[*] afos -i empire
+..........................................................
+basic command like changing into root
+[*] su
+
+//default root password
+password: andrax
+...................................................................................
+You can list ANDRAX available services using the command:
+
+[*]sudo service --status-all
+
+....................................................................................
+#How to enable SSH Server?
+To start SSH Daemon you only need press this command:
+
+	>sudo service ssh start
+
+To start Graphical Interface on ANDRAX?
+
+	>sudo service vnc start
+
+Now ANDRAX VNC server is started and the Graphical Interface is fully operational,
+you can access the Graphical Interface using any VNC client on your Android or 
+In your PC if you want it.
+
+The port is 5901 and the password is andrax
+....................................................................................
+#how to install andrax on RPi 3B/3B+/zero w /4 onwards..
+
+>install zip file from website 
+>just "cd" in this directory in the terminal and run:
+	>sudo bash install.sh
+and wait the installation finish( It may take a hour)
+
+what to do if installation fail?
+	>Try again .....
+
+what if fail again?
+	>Shoot yourself with a .50 BMG Barrett. 
+...................................................................................
+#how to run tools
+> Just type tool running command 
+	e.g. "msfconsole" for metasploit 
