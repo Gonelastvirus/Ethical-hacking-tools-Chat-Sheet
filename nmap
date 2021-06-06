@@ -1,0 +1,53 @@
+#!!Namp Coomands:
+
+TCP NULL Scan	            	nmap -sN [target]			nmap -sN 192.168.0.1
+TCP FIN Scan	            	nmap -sF [target]			nmap -sF 192.168.0.1
+Xmas Scan	            	nmap -sX [target]			nmap -sX 192.168.0.1
+IP Protocol Scan            	nmap -sO [target]			nmap -sO 192.168.0.1
+Send Raw Ethernet Packets   	nmap –send-eth [target]			nmap –send-eth 192.168.0.1
+Send IP Packets			nmap –send-ip [target]			nmap –send-ip 192.168.0.1
+Disable Reverse DNS Resolution	nmap -n [target]			nmap -n 192.168.0.1
+Alternative DNS Lookup		nmap –system-dns [target]		nmap –system-dns 192.168.0.1
+Manually Specify DNS Server(s)	nmap –dns-servers [servers] [target]	nmap –dns-servers 201.56.212.54 192.168.0.1
+Create a Host List		nmap -sL [targets]			nmap -sL 192.168.0.1/24
+ _________________________________________________________________________________
+| Flag |           Use                                |        Example            |
+|_____ |______________________________________________|___________________________|
+| -sS  |	TCP syn port scan                     |  nmap -sS 192.168.1.1 	  |
+| -sT  |	TCP connect port scan                 |  nmap -sT 192.168.1.1 	  |
+| –sU  |	UDP port scan	                      |  nmap –sU 192.168.1.1 	  |
+| –sA  |	TCP ack port scan                     |  nmap –sA 192.168.1.1 	  | 
+|______|______________________________________________|___________________________|
+|      |					      |				  |
+| -Pn  | 	only port scan	                      |  nmap -Pn192.168.1.1      |
+| -sn  |	only host discover	              |  nmap -sn192.168.1.1      |
+| -PR  |	arp discovery on a local network      |  nmap -PR192.168.1.1      |
+| -n   | 	disable DNS resolution	              |  nmap -n 192.168.1.1      |
+| -p   |        specify a port or port range	      |  nmap -p 1-30 192.168.1.1 |
+| -p-  |        scan all ports	                      |  nmap -p- 192.168.1.1     |
+| -F   |	fast port scan	                      |  nmap -F 192.168.1.1      |
+| -O   |	detect operating system of the target |  nmap -O 192.168.1.1      |
+| -sc  |        default Script scan                   |  nmap -sC 192.168.1.1     |
+|      |        Top-port scan                         |  nmap –top-ports [Target] |
+| -f   |       use fragmented IP packets	      |  nmap -f 192.168.1.1      |
+| -D   |       decoy scans	                      |  nmap -D 192.168.1.1      |
+| -g   |       use a given source port number	      |  nmap -g 22 192.168.1.1   |
+| -T0  |       paranoid IDS evasion	              |  nmap -T0 192.168.1.1     |
+| -T1  |       sneaky IDS evasion	              |  nmap -T1 192.168.1.1     |
+| -T2  |       polite IDS evasion	              |  nmap -T2 192.168.1.1     |
+| -T3  |       normal IDS evasion	              |  nmap -T3 192.168.1.1     |
+| -T4  |       aggressive speed scan	              |  nmap -T4 192.168.1.1     |
+| -T5  |       insane speed scan	              |  nmap -T5 192.168.1.1     |
+|______|______________________________________________|___________________________|	 
+
+Traceroute	                nmap –traceroute [target]	        nmap –traceroute 192.168.0.1
+Force Reverse DNS Resolution	nmap -R [target]	                nmap -R 192.168.0.1
+Attempt to Guess an Unknown OS	nmap -O –-osscan guess [target]	        nmap -O –osscan-guess 192.168.0.1
+Spoof MAC Address	        nmap –spoof-mac [MAC|0|vendor] [target]	nmap –spoof-mac Cis 192.168.0.1
+Perform a Sequential Port Scan	nmap -r [target]	                nmap -r 192.168.0.1
+Perform a RPC Scan	        nmap -sR [target]	                nmap -sR 192.168.0.1  
+Trace Packets	                nmap –packet-trace [target]	        nmap –packet-trace 192.168.0.1   
+le Zombie Scan	                nmap -sI [zombie] [target]	        nmap -sI 192.168.0.38
+Service Version Detection	nmap -sV [target]	                nmap -sV 192.168.0.1
+
+------------------------------------------------------------------------------------------------------------------------------

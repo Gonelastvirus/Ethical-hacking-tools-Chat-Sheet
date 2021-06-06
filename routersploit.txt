@@ -1,5 +1,7 @@
 #!routersploit
 ....................................................
+Basic commands:
+
 rsf> show exploits
 rsf> show scanners
 rsf> Show creds
@@ -15,6 +17,9 @@ then run
 //we simply set ip addresss and start scanner
 [*] set target <target_IP>
 [*] run
+......................................................
+[*]set target < >
+[*]set port < >
 ......................................................
 We can use the Exploits and Payloads module for the found vulnerabilities to gain control of the router.
 Attribution link: https://latesthackingnews.com/2018/07/23/routersploit-a-framework-for-exploiting-embedded-devices
@@ -60,4 +65,5 @@ It is a critical vulnerability which allows an attacker to take remote control o
 [*] rsf()> back
 rsf>
 ....................................................................
-
+brute force:
+set defaults file: ///root/newrockyou.txt

