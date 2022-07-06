@@ -52,6 +52,6 @@ Service Version Detection	nmap -sV [target]	                nmap -sV 192.168.0.1
 save result in 3 major format  -oA
 save result in normal format   -oN
 save result in grepable format  -oG
-
+Aggressive scaqn                -A
 
 ------------------------------------------------------------------------------------------------------------------------------
