@@ -10,6 +10,7 @@ Disable Reverse DNS Resolution	nmap -n [target]			nmap -n 192.168.0.1
 Alternative DNS Lookup		nmap –system-dns [target]		nmap –system-dns 192.168.0.1
 Manually Specify DNS Server(s)	nmap –dns-servers [servers] [target]	nmap –dns-servers 201.56.212.54 192.168.0.1
 Create a Host List		nmap -sL [targets]			nmap -sL 192.168.0.1/24
+Checks if an FTP server allows anonymous logins nmap -sV -sC <target>
  _________________________________________________________________________________
 | Flag |           Use                                |        Example            |
 |_____ |______________________________________________|___________________________|
